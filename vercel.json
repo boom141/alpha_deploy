@@ -3,7 +3,7 @@
 
     "builds": [
         {
-            "src": "*.py",
+            "src": "main.py",
             "use": "@vercel/python"
         }
     ],
@@ -13,12 +13,5 @@
             "src": "(.*)",
             "dest": "main.py"
         }
-    ],
-
-    "function": {
-        "admin.py": {
-          "memory": 3008,
-          "maxDuration": 30
-        }
-    }
+    ]
 }
