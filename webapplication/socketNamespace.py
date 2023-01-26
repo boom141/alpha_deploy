@@ -34,9 +34,6 @@ class RoomServices(Namespace):
     def on_disconnect(self):
         if clientManager.client_leave():
             session.clear()
-            print('[CLIENT DISCONENCTED]:',request.sid)
-            print('ACTIVE CLIENT',session)
-
 
     def on_room_request(self):
         if not clientManager.duplication():
@@ -55,7 +52,6 @@ class RoomServices(Namespace):
         emit('btn_activator', 'all', to=roomName, broadcast=True)
 
     def on_backup_loader(self, data, roomName):
-        print(data)
         emit('backup', data, to=roomName, broadcast=True) 
 
 
